@@ -1,8 +1,8 @@
 # RobotMapping_SLAM_Assignments_In_Cpp
-I solved the assignments from the robot mapping course taught by Dr. Cyrill Stachniss at the University of Freiburg using C++.
+I solved the assignments from the SLAM (2013) or "Robot Mapping" course taught by Dr. Cyrill Stachniss using C++.
 
 ## Status / TODO's:
-I have solved the problems and my plots agree with those in the assignments or the "world" definitions; however, some of the code could certainly be improved in terms of proof of validity, readability, and efficiency. The general structuring of the project is also really bad at the moment, so I plan to fix this.
+I have solved the problems and my plots agree with those in the assignments or the "world" definitions; however, some of the code could certainly be improved in terms of proof of validity, readability, and efficiency. There is inconsistent structuring of the project folders at the moment, so I plan to fix this.
 
 Dumping into csv and plotting with python "works", but I would really like to setup something like gnuplot so the plots can be generated as the code is running.
 
