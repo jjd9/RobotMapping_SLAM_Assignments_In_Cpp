@@ -1,5 +1,5 @@
 # RobotMapping_SLAM_Assignments_In_Cpp
-I solved the assignments from the SLAM (2013) or "Robot Mapping" course taught by Dr. Cyrill Stachniss (https://www.youtube.com/playlist?list=PLgnQpQtFTOGQrZ4O5QzbIHgl3b1JHimN_) using C++.
+I solved the assignments from the SLAM (2013) or "Robot Mapping" course taught by Dr. Cyrill Stachniss using C++.
 
 ## Status / TODO's:
 I have solved the problems and my plots agree with those in the assignments or the "world" definitions; however, some of the code could certainly be improved in terms of proof of validity, readability, and efficiency. There is inconsistent structuring of the project folders at the moment, so I plan to fix this.
