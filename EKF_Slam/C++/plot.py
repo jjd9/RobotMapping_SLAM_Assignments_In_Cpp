@@ -4,7 +4,7 @@ import numpy as np
 import IPython
 
 data = np.loadtxt(r"..\C++\SLAM_estimates.csv",delimiter=",")
-
+data[data==0] = np.nan
 robot = data[:,:2]
 plt.plot(robot[:,0],robot[:,1],'ko',label='robot')
 

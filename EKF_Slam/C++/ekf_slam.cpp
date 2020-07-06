@@ -4,7 +4,7 @@
 #include <vector>
 #include <sstream>
 
-#include "eigen/Eigen/Dense"
+#include "../../eigen/Eigen/Dense"
 #include "prediction_step.h"
 #include "correction_step.h"
 

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "eigen/Eigen/Dense"
+#include "../../eigen/Eigen/Dense"
 
 #include "tools/read_data.h"
 #include "tools/normalize_all_bearings.h"
@@ -41,7 +41,7 @@ void correction_step(VectorXf &mu, MatrixXf &sigma, std::vector<Sensor> z, std::
         int landmarkId = z[i].id;
 
         int landmark_x_idx = 3 + landmarkId*2;
-        int landmark_y_idx = 3 + landmarkId*2 + 1;
+        int landmark_y_idx = 4 + landmarkId*2;
 
         // If the landmark is obeserved for the first time:
         if(observedLandmarks[landmarkId]==false){
@@ -58,12 +58,12 @@ void correction_step(VectorXf &mu, MatrixXf &sigma, std::vector<Sensor> z, std::
         
         // Use the current estimate of the landmark pose
         // to compute the corresponding expected measurement in expectedZ:
-        float dx = z[i].range*std::cos(mu(2)+z[i].bearing);
-        float dy = z[i].range*std::sin(mu(2)+z[i].bearing);
+        float dx = mu(landmark_x_idx) - mu(0);
+        float dy = mu(landmark_y_idx) - mu(1);
         float q = std::pow(dx,2)+std::pow(dy,2);
         float sq = std::sqrt(q);
         expectedZ(2*i) = sq;
-        expectedZ(2*i+1) = std::atan2(dy,dx) - mu(2);
+        expectedZ(2*i+1) = normalize_angle(std::atan2(dy,dx) - mu(2));
 
         // Compute the Jacobian Hi of the measurement function h for this observation
 

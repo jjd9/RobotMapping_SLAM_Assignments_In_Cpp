@@ -2,7 +2,7 @@
 
 #include <cmath>
 
-#include "eigen/Eigen/Dense"
+#include "../../eigen/Eigen/Dense"
 #include "tools/read_data.h"
 
 using namespace Eigen;
