@@ -1,6 +1,11 @@
 # RobotMapping_SLAM_Assignments_In_Cpp
 I solved the assignments from the SLAM (2013) or "Robot Mapping" course taught by Dr. Cyrill Stachniss using C++.
 
+## Requirements
+The only 3rd party dependency for the C++ code is the linear algebra library Eigen. I used 3.3.7, but it is possible that this could work with older/newer versions.
+
+I have been compiling this on a windows 10 PC using g++ version 6.3.0, and it is not giving me any warnings.
+
 ## Status / TODO's:
 I have solved the problems and my plots agree with those in the assignments or the "world" definitions; however, some of the code could certainly be improved in terms of proof of validity, readability, and efficiency. There is inconsistent structuring of the project folders at the moment, so I plan to fix this.
 
